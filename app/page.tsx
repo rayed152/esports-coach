@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 // 1. Updated import to match your new server action name
-import { getDetailedStats, getMatchAnalysisData } from "./action/valorant";
+import { getDetailedStats, getMatchAnalysisData } from "./actions/valorant";
 
 export default function Home() {
   const [riotId, setRiotId] = useState("");
