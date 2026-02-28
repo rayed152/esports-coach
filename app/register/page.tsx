@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { registerUser, loginUser } from "../actions/auth";
+import { registerUser } from "../actions/auth";
+import { signIn } from "next-auth/react";
 import Link from "next/link";
 
 export default function RegisterPage() {
@@ -23,8 +24,23 @@ export default function RegisterPage() {
         return;
       }
       
-      // Auto login after successful registration
-      await loginUser(formData);
+      const email = formData.get("email") as string;
+      const password = formData.get("password") as string;
+
+      // Auto login after successful registration via client side
+      const signInResult = await signIn("credentials", {
+        email,
+        password,
+        redirect: false,
+      });
+
+      if (signInResult?.error) {
+        setError("Account created, but couldn't auto-login.");
+        setLoading(false);
+      } else {
+        // Force a hard reload to dashboard
+        window.location.href = "/dashboard";
+      }
       
     } catch (err) {
       console.error(err);

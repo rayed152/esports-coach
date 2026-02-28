@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { loginUser } from "../actions/auth";
+import { signIn } from "next-auth/react";
+
 import Link from "next/link";
 
 export default function LoginPage() {
@@ -15,13 +16,25 @@ export default function LoginPage() {
 
     const formData = new FormData(e.currentTarget);
     try {
-      const response = await loginUser(formData);
-      if (response?.error) {
-        setError(response.error);
+      const email = formData.get("email") as string;
+      const password = formData.get("password") as string;
+
+      const result = await signIn("credentials", {
+        email,
+        password,
+        redirect: false,
+      });
+
+      if (result?.error) {
+        setError("Invalid credentials. Please try again.");
+        setLoading(false);
+      } else {
+        // Force a hard reload to the dashboard so auth context completely refreshes
+        window.location.href = "/dashboard";
       }
     } catch (err) {
       console.error(err);
-    } finally {
+      setError("An unexpected error occurred");
       setLoading(false);
     }
   };

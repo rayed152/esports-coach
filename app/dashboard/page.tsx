@@ -1,5 +1,4 @@
 "use client";
-import { signOut } from "next-auth/react";
 import { useState } from "react";
 // 1. Updated import to match your new server action name
 import { getDetailedStats, getMatchAnalysisData } from "../actions/valorant";
@@ -43,18 +42,6 @@ export default function Home() {
 
   return (
     <main className="p-10 max-w-3xl mx-auto bg-slate-50 min-h-screen text-slate-900">
-      <div className="flex justify-between items-center mb-8">
-        <h1 className="text-4xl font-extrabold text-red-600 italic">
-          VALORANT <span className="text-slate-800">AI AGENT</span>
-        </h1>
-        <button 
-          onClick={() => signOut({ callbackUrl: '/' })}
-          className="bg-slate-800 text-white px-4 py-2 rounded text-sm font-bold shadow-sm hover:bg-slate-700 transition"
-        >
-          SIGN OUT
-        </button>
-      </div>
-      
       <div className="flex gap-2 mb-10 shadow-md p-2 bg-white rounded-lg">
         <input 
           className="p-3 flex-1 rounded text-black outline-none bg-transparent"
