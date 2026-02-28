@@ -18,7 +18,7 @@ export function Navbar() {
 
   const publicNavItems = [
     { name: "Docs", href: "#" },
-    { name: "Getting Started", href: "#" },
+    { name: "Insights", href: "#" },
     { name: "Pricing", href: "#" },
   ];
 

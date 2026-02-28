@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VALORANT AI | Ascend Your Game</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#FF4655",
+                        "accent-cyan": "#00f2ff",
+                        "background-light": "#f8f5f6",
+                        "background-dark": "#0F1923",
+                        "surface-dark": "#17222d",
+                        "border-dark": "#2a3744",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "2px",
+                        "xl": "4px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .slanted-bg {
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+        }
+        .scanline {
+            background: linear-gradient(to bottom, rgba(15, 25, 35, 0) 50%, rgba(255, 70, 85, 0.05) 50%);
+            background-size: 100% 4px;
+        }
+        .hero-mask {
+            mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 border-b border-border-dark bg-background-dark/80 backdrop-blur-md px-6 lg:px-20">
+<div class="max-w-7xl mx-auto flex items-center justify-between h-20">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-primary flex items-center justify-center" style="clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);">
+<span class="material-symbols-outlined text-white text-xl">bolt</span>
+</div>
+<h2 class="text-xl font-bold tracking-tighter uppercase italic">VALORANT<span class="text-primary italic">AI</span></h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors" href="#">Analysis</a>
+<a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors" href="#">Insights</a>
+<a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors" href="#">Benchmarking</a>
+<a class="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors" href="#">Pricing</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="hidden sm:flex bg-primary hover:bg-red-600 text-white text-xs font-black uppercase tracking-[0.2em] px-8 py-3 transition-all transform hover:-translate-y-0.5" style="clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);">
+                    Get Started
+                </button>
+<div class="h-10 w-10 border border-border-dark p-1">
+<div class="w-full h-full bg-slate-700" data-alt="User avatar placeholder"></div>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center px-6 lg:px-20 overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-40 hero-mask">
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/60 to-transparent z-10"></div>
+<div class="w-full h-full bg-[url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&amp;fit=crop&amp;q=80&amp;w=2000')] bg-cover bg-center" data-alt="Stylized Valorant map background with cinematic lighting" data-location="Bind" style=""></div>
+<div class="absolute inset-0 scanline pointer-events-none"></div>
+</div>
+<div class="relative z-20 max-w-4xl">
+<div class="inline-block bg-primary/10 border-l-4 border-primary px-4 py-2 mb-8">
+<span class="text-primary text-xs font-black uppercase tracking-[0.3em]">Protocol // AI_COACH_V2.0</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-black italic uppercase leading-[0.9] tracking-tighter mb-6">
+                Ascend Your <br/> <span class="text-primary">Game</span> With AI Precision.
+            </h1>
+<p class="text-lg md:text-xl text-slate-400 max-w-xl mb-10 leading-relaxed">
+                The ultimate tactical analysis engine for serious competitors. Decipher enemy rotations, optimize utility, and claim your Radiant rank.
+            </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary hover:bg-red-600 text-white font-black uppercase tracking-[0.2em] px-10 py-5 flex items-center gap-3 transition-all" style="clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);">
+                    Get Started
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-surface-dark border border-border-dark hover:bg-slate-800 text-white font-black uppercase tracking-[0.2em] px-10 py-5 flex items-center gap-3 transition-all" style="clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);">
+                    Watch Demo
+                    <span class="material-symbols-outlined">play_circle</span>
+</button>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute right-[-10%] bottom-[-5%] w-[600px] h-[600px] border border-primary/20 rounded-full blur-[120px] pointer-events-none"></div>
+</section>
+<!-- Social Proof -->
+<section class="bg-surface-dark py-12 px-6 lg:px-20 border-y border-border-dark relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 opacity-20" style="background-image: radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0); background-size: 24px 24px;"></div>
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+<div class="text-center md:text-left">
+<p class="text-slate-400 uppercase tracking-[0.4em] text-xs font-bold mb-2">Tactical Network Stability</p>
+<p class="text-3xl font-black italic">TRUSTED BY 500K+</p>
+</div>
+<div class="h-[1px] w-20 bg-border-dark hidden md:block"></div>
+<div class="flex gap-12 grayscale opacity-60">
+<div class="flex items-center gap-2 font-bold uppercase tracking-widest text-xl">Radiant <span class="text-primary">Rank</span></div>
+<div class="flex items-center gap-2 font-bold uppercase tracking-widest text-xl">Immortal <span class="text-primary">Elite</span></div>
+<div class="flex items-center gap-2 font-bold uppercase tracking-widest text-xl">Pro <span class="text-primary">Circuit</span></div>
+</div>
+</div>
+</section>
+<!-- Feature Grid -->
+<section class="py-24 px-6 lg:px-20 max-w-7xl mx-auto">
+<div class="mb-20">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-[2px] bg-primary"></div>
+<span class="text-primary font-black uppercase tracking-[0.4em] text-xs">Core Modules</span>
+</div>
+<h2 class="text-5xl font-black italic uppercase tracking-tighter">Engineered for <span class="text-accent-cyan">Excellence</span></h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+<!-- Feature 1 -->
+<div class="group relative bg-surface-dark p-10 border border-border-dark transition-all hover:bg-slate-800/50">
+<div class="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-primary/30 group-hover:border-primary transition-colors"></div>
+<span class="material-symbols-outlined text-primary text-5xl mb-8">analytics</span>
+<h3 class="text-2xl font-black italic uppercase mb-4 tracking-tight">Deep Match Analysis</h3>
+<p class="text-slate-400 leading-relaxed mb-8">Frame-by-frame breakdown of your movement, crosshair placement, and reaction times using proprietary computer vision.</p>
+<div class="flex items-center text-xs font-black uppercase tracking-widest text-primary gap-2 cursor-pointer">
+                    Initialize Scan <span class="material-symbols-outlined text-sm">chevron_right</span>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="group relative bg-surface-dark p-10 border border-border-dark transition-all hover:bg-slate-800/50">
+<div class="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-accent-cyan/30 group-hover:border-accent-cyan transition-colors"></div>
+<span class="material-symbols-outlined text-accent-cyan text-5xl mb-8">neurology</span>
+<h3 class="text-2xl font-black italic uppercase mb-4 tracking-tight">AI Tactical Insights</h3>
+<p class="text-slate-400 leading-relaxed mb-8">Real-time strategy suggestions based on opponent patterns. Know where they stack before the round even starts.</p>
+<div class="flex items-center text-xs font-black uppercase tracking-widest text-accent-cyan gap-2 cursor-pointer">
+                    Predict Strategy <span class="material-symbols-outlined text-sm">chevron_right</span>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="group relative bg-surface-dark p-10 border border-border-dark transition-all hover:bg-slate-800/50">
+<div class="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-primary/30 group-hover:border-primary transition-colors"></div>
+<span class="material-symbols-outlined text-primary text-5xl mb-8">equalizer</span>
+<h3 class="text-2xl font-black italic uppercase mb-4 tracking-tight">Pro Benchmarking</h3>
+<p class="text-slate-400 leading-relaxed mb-8">Compare your utility effectiveness and trade-kill ratio directly against the top 0.1% of professional players.</p>
+<div class="flex items-center text-xs font-black uppercase tracking-widest text-primary gap-2 cursor-pointer">
+                    View Rankings <span class="material-symbols-outlined text-sm">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Preview -->
+<section class="py-24 px-6 lg:px-20 bg-background-dark relative overflow-hidden">
+<div class="absolute left-[-10%] top-0 w-[800px] h-[800px] bg-accent-cyan/5 rounded-full blur-[150px]"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="text-5xl font-black italic uppercase tracking-tighter mb-8 leading-none">
+                    Real-Time <br/> <span class="text-primary italic">Intelligence</span>
+</h2>
+<div class="space-y-6">
+<div class="flex gap-4 p-6 bg-surface-dark/40 border-l-2 border-accent-cyan">
+<span class="material-symbols-outlined text-accent-cyan">track_changes</span>
+<div>
+<h4 class="font-bold uppercase tracking-wider mb-1">Pattern Recognition</h4>
+<p class="text-slate-400 text-sm">AI identifies enemy lurk patterns after only 3 rounds of data.</p>
+</div>
+</div>
+<div class="flex gap-4 p-6 bg-surface-dark/40 border-l-2 border-primary">
+<span class="material-symbols-outlined text-primary">warning</span>
+<div>
+<h4 class="font-bold uppercase tracking-wider mb-1">Vulnerability Alerts</h4>
+<p class="text-slate-400 text-sm">Get notified when your rotation speed is below professional standards.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Glassmorphic Card Preview -->
+<div class="relative">
+<div class="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-accent-cyan/20 blur-2xl opacity-30"></div>
+<div class="relative bg-surface-dark/80 backdrop-blur-xl border border-white/10 p-8 shadow-2xl rounded-lg">
+<div class="flex items-center justify-between mb-8 border-b border-white/5 pb-4">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-red-500"></div>
+<span class="text-xs font-black uppercase tracking-widest opacity-60">Live Tactical Feed</span>
+</div>
+<span class="text-accent-cyan font-mono text-xs">RE_RUNNING_SIM...</span>
+</div>
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<span class="text-sm font-bold uppercase tracking-tighter">Aim Consistency</span>
+<span class="text-primary font-black">94.2%</span>
+</div>
+<div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[94.2%] shadow-[0_0_10px_#FF4655]"></div>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-8">
+<div class="bg-black/40 p-4 border border-white/5">
+<p class="text-[10px] uppercase text-slate-500 font-bold mb-1">Utility Impact</p>
+<p class="text-xl font-black italic">A-GRADE</p>
+</div>
+<div class="bg-black/40 p-4 border border-white/5">
+<p class="text-[10px] uppercase text-slate-500 font-bold mb-1">Clutch Factor</p>
+<p class="text-xl font-black italic">1.44</p>
+</div>
+</div>
+<div class="mt-8 p-4 bg-accent-cyan/10 border border-accent-cyan/20 rounded-lg">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-accent-cyan text-sm">info</span>
+<span class="text-[10px] font-black uppercase text-accent-cyan tracking-widest">AI Strategy Recommendation</span>
+</div>
+<p class="text-xs text-slate-200 leading-relaxed italic">"Enemy Jett habitually rotates through Mid Vents at 1:15. Pre-aim suggested for next round."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-dark pt-24 pb-12 px-6 lg:px-20 border-t border-border-dark overflow-hidden relative">
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-8 h-8 bg-primary flex items-center justify-center" style="clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);">
+<span class="material-symbols-outlined text-white text-xl">bolt</span>
+</div>
+<h2 class="text-2xl font-bold tracking-tighter uppercase italic">VALORANT<span class="text-primary italic">AI</span></h2>
+</div>
+<p class="text-slate-500 max-w-sm mb-8">The professional standard for tactical analysis. Our AI doesn't just watch your games—it understands them.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 bg-surface-dark border border-border-dark flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+<a class="w-10 h-10 bg-surface-dark border border-border-dark flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 bg-surface-dark border border-border-dark flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">hub</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-black uppercase tracking-widest text-xs mb-8 text-primary">Protocol</h4>
+<ul class="space-y-4 text-sm font-bold text-slate-400">
+<li><a class="hover:text-white transition-colors uppercase" href="#">Match Analysis</a></li>
+<li><a class="hover:text-white transition-colors uppercase" href="#">Aim Trainer</a></li>
+<li><a class="hover:text-white transition-colors uppercase" href="#">Team Strategy</a></li>
+<li><a class="hover:text-white transition-colors uppercase" href="#">API Docs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-black uppercase tracking-widest text-xs mb-8 text-primary">Support</h4>
+<ul class="space-y-4 text-sm font-bold text-slate-400">
+<li><a class="hover:text-white transition-colors uppercase" href="#">Discord Community</a></li>
+<li><a class="hover:text-white transition-colors uppercase" href="#">Help Center</a></li>
+<li><a class="hover:text-white transition-colors uppercase" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors uppercase" href="#">Terms of Ops</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-12 border-t border-border-dark flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-[10px] font-bold text-slate-600 uppercase tracking-[0.2em]">© 2024 VALORANT AI AGENT. NOT AFFILIATED WITH RIOT GAMES.</p>
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-black uppercase text-slate-400 tracking-widest">Server Status:</span>
+<div class="flex items-center gap-1">
+<div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+<span class="text-[10px] font-black text-emerald-500 uppercase">Operational</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="absolute bottom-0 right-0 opacity-5 pointer-events-none select-none">
+<h1 class="text-[200px] font-black italic tracking-tighter leading-none mb-[-40px]">COACH</h1>
+</div>
+</footer>
+</body></html>

@@ -1,2 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #FF4655;
+  --color-accent-cyan: #00f2ff;
+  --color-background-light: #f8f5f6;
+  --color-background-dark: #0F1923;
+  --color-surface-dark: #17222d;
+  --color-border-dark: #2a3744;
+  --font-display: "Space Grotesk", sans-serif;
+  --radius-lg: 2px;
+  --radius-xl: 4px;
+}
+
+.slanted-bg {
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+}
+.scanline {
+    background: linear-gradient(to bottom, rgba(15, 25, 35, 0) 50%, rgba(255, 70, 85, 0.05) 50%);
+    background-size: 100% 4px;
+}
+.hero-mask {
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
